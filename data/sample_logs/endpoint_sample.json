@@ -1,0 +1,27 @@
+[
+  {
+    "source": "endpoint",
+    "raw_message": "Process created: powershell.exe -EncodedCommand SQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0",
+    "hostname": "WORKSTATION-01",
+    "user": "jsmith",
+    "action": "process_create",
+    "metadata": {
+      "process_name": "powershell.exe",
+      "CommandLine": "-EncodedCommand SQBuAHYAbwBrAGUALQBXAGUAYgBSAGUAcQB1AGUAcwB0",
+      "parent_process": "cmd.exe",
+      "pid": 4532
+    }
+  },
+  {
+    "source": "endpoint",
+    "raw_message": "Failed login attempt for user admin from 192.168.1.200",
+    "hostname": "SERVER-DC01",
+    "user": "admin",
+    "source_ip": "192.168.1.200",
+    "action": "login_failed",
+    "metadata": {
+      "event_id": 4625,
+      "logon_type": 3
+    }
+  }
+]
