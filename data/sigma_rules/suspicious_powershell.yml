@@ -1,0 +1,20 @@
+title: Suspicious PowerShell Download Cradle
+id: SIGMA-001
+description: Detects PowerShell download cradles commonly used by attackers
+level: high
+tags:
+  - attack.execution
+  - attack.t1059.001
+detection:
+  selection:
+    process_name:
+      - "*powershell*"
+      - "*pwsh*"
+    CommandLine:
+      - "*downloadstring*"
+      - "*downloadfile*"
+      - "*invoke-webrequest*"
+      - "*wget*"
+      - "*curl*"
+      - "*iex*"
+      - "*invoke-expression*"
