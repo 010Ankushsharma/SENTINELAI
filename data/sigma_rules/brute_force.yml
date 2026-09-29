@@ -1,0 +1,14 @@
+title: Brute Force Authentication Attempt
+id: SIGMA-002
+description: Multiple failed authentication attempts indicating brute force
+level: high
+tags:
+  - attack.credential_access
+  - attack.t1110
+detection:
+  selection:
+    category: authentication
+    action:
+      - "*fail*"
+      - "*denied*"
+      - "*rejected*"
