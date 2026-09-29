@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sentinelai-detection
+  namespace: sentinelai
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: sentinelai-detection
+  template:
+    metadata:
+      labels:
+        app: sentinelai-detection
+    spec:
+      containers:
+        - name: detection
+          image: sentinelai/detection:latest
+          envFrom:
+            - secretRef:
+                name: sentinelai-secrets
+          resources:
+            requests:
+              cpu: "1000m"
+              memory: "2Gi"
+            limits:
+              cpu: "4000m"
+              memory: "8Gi"
