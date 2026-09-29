@@ -1,0 +1,22 @@
+[
+  {
+    "source": "firewall",
+    "raw_message": "DENY TCP 192.168.1.100:54321 -> 10.0.0.5:445 RULE: block-smb",
+    "source_ip": "192.168.1.100",
+    "dest_ip": "10.0.0.5",
+    "source_port": 54321,
+    "dest_port": 445,
+    "protocol": "TCP",
+    "action": "deny"
+  },
+  {
+    "source": "firewall",
+    "raw_message": "ALLOW TCP 10.0.0.50:443 -> 203.0.113.10:443 RULE: allow-https",
+    "source_ip": "10.0.0.50",
+    "dest_ip": "203.0.113.10",
+    "source_port": 443,
+    "dest_port": 443,
+    "protocol": "TCP",
+    "action": "allow"
+  }
+]
